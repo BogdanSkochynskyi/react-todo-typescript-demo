@@ -1,4 +1,11 @@
-function TodoRowItem(props) {
+import React from "react"
+
+export const TodoRowItem: React.FC<{
+    rowNumber:number, 
+    rowDescription:string, 
+    rowAssigned:string, 
+    deleteTask:Function
+}> = (props) => {
 
     return (
         <tr onClick={() => props.deleteTask(props.rowNumber)}>
@@ -8,5 +15,3 @@ function TodoRowItem(props) {
         </tr>
     )
 }
-
-export default TodoRowItem
